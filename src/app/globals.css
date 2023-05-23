@@ -21,6 +21,7 @@ body {
   background: black;
   overflow-x: clip;
   scroll-behavior: smooth;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
 }
 
 

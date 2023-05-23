@@ -1,5 +1,3 @@
-import { Suspense } from "react"
-import Loading from "../loading"
 import Image from "next/image"
 import { getPlaiceholder } from "plaiceholder"
 
@@ -11,7 +9,6 @@ async function Background({ backgroundURL }) {
     const { base64, img } = await getPlaiceholder(src, options)
 
   return (
-    <Suspense fallback={<Loading />}>
     <div
         className='fixed top-0 left-0 h-screen w-screen -z-10 duration-500'
     >
@@ -31,7 +28,6 @@ async function Background({ backgroundURL }) {
         
         {/* This is decoration */}
     </div>
-    </Suspense>
   )
 }
 

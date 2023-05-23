@@ -16,7 +16,7 @@ function Details({ data }) {
             <DetailComponent title='Release Date' detail={data.release_date} />
             <DetailComponent title='Revenue' detail={data.revenue} />
             <DetailComponent title='Spoken Languages' detail={data.spoken_languages} />
-            <DetailComponent title='Status' detail={data.spoken_languages} />
+            <DetailComponent title='Status' detail={data.status} />
             <DetailComponent title='Vote average' detail={data.vote_average} />
         </div>
     </div>
