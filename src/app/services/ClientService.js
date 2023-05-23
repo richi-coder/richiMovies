@@ -4,3 +4,8 @@ export const fetchFromClient = async (query) => {
     const data = await fetch(`/api/search?query=${query}`);
     return data.json();
 }
+
+export const fetchSuggestions = async () => {
+    const data = await fetch('/api/suggestions');
+    return data.json()
+}

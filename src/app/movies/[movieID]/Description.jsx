@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react"
 
 function Description({ data, movieID }) {
+    console.log(data);
     const shortDescription = data.overview ? `${data.overview.slice(0,127)} . . .` : 'No description available!';
     const longDescription = data.overview ? data.overview : 'No description available!';
     const [description, setDescription] = useState(shortDescription)
@@ -14,19 +15,21 @@ function Description({ data, movieID }) {
     }
 
   return (
-    <div className={`w-full h-[60vh] px-24 pb-10 flex flex-col items-start justify-end gap-8`}>
-        <h2 className="font-bold text-5xl transition-all duration-500">
+    <div className={`w-full h-[80vh] px-24 pb-10 flex flex-col items-start justify-end gap-8`}>
+        <h2 className="font-bold text-3xl sm:text-5xl animate-fade-up">
             {data.title}
         </h2>
-        <p className="w-1/2 transition-all h-fit text-left">
+        <p className="w-1/2 h-fit text-left animate-fade-up">
             {description}
         </p>
-        <button onClick={changeVisibility}>
+        <button
+            className='animate-fade-up'
+            onClick={changeVisibility}>
             View more
         </button>
         <Link
             href={`/movies/${movieID}/streaming`}
-            className="font-bold px-6 py-4 bg-blue-600">
+            className='font-bold px-6 py-4 bg-blue-600 animate-fade-up'>
             TRAILER
         </Link>
     </div>
