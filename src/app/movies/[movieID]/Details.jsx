@@ -2,7 +2,7 @@ import DetailComponent from './DetailComponent'
 
 function Details({ data }) {
   return (
-    <div className='w-full animate-fade-up bg-gradient-to-t from-black from-80% to-transparent to-90% pt-16'>
+    <div className='w-full pt-24 bg-black'>
         <p className='text-3xl pl-24 font-bold mb-16'>Details</p>
         <div className='mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left px-24 gap-y-16 gap-x-5'>
             <DetailComponent title='Adult' detail={data.adult} />

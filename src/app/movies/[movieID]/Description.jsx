@@ -15,7 +15,7 @@ function Description({ data, movieID }) {
     }
 
   return (
-    <div className={`w-full h-[80vh] px-24 pb-10 flex flex-col items-start justify-end gap-8`}>
+    <div className={`w-full h-[80vh] px-24 pb-6 flex flex-col items-start justify-end gap-8 bg-gradient-to-t from-black from-0% to-transparent to-20%`}>
         <h2 className="font-bold text-3xl sm:text-5xl animate-fade-up">
             {data.title}
         </h2>
