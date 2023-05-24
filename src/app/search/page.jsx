@@ -11,7 +11,7 @@ function Search() {
   const searchMovies = async (e) => {
     e.preventDefault();
     const { data } = await fetchFromClient(query);
-    console.log(data);
+    console.log(data, 'SEARCH PAGE');
     setSearchedMovies(data.results)
   }
 
@@ -30,7 +30,7 @@ function Search() {
           placeholder="Search"
           autoFocus
         />
-        <Link href={'/movies'}><i className="absolute top-1/2 -translate-y-1/2 right-0">X</i></Link>
+        <Link href={'/productions'}><i className="absolute top-1/2 -translate-y-1/2 right-0">X</i></Link>
       </form>
       <SearchResults searchedMovies={searchedMovies} />
     </div>

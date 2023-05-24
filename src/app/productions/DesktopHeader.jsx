@@ -5,7 +5,7 @@ function DesktopHeader() {
   return (
     <div className='flex flex-row w-full h-[6vh]'>
         <div className='flex flex-row w-3/4 h-full items-center pl-10'>
-            <Link href={'/movies'}>
+            <Link href={'/productions'}>
                 LOGO
             </Link>
             <Link href={'/'}>

@@ -2,7 +2,7 @@
 import SearchResults from '@/app/search/SearchResults'
 import { fetchSuggestions } from '@/app/services/ClientService'
 import { useEffect, useState } from 'react'
-import ClientCategory from '../ClientCategory'
+import ClientCategory from '../../ClientCategory'
 
 function Suggestions() {
     const [suggestedMovies, setSuggestedMovies] = useState(null)

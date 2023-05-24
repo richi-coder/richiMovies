@@ -6,7 +6,7 @@ import FallbackMovie from "./FallbackMovie";
 function ResultMovie({ searchedMovie: movie }) {
   return (
     <li className="w-44 h-fit animate-fade-up overflow-hidden mx-auto">
-      <Link href={`/movies/${movie.id}`} className='h-fit'>
+      <Link href={`/productions/${movie.media_type}/${movie.id}`} className='h-fit'>
     {
         movie.poster_path ?
         <Image

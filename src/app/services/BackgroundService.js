@@ -13,16 +13,16 @@ export const fetchCategoriesMovies = async (category) => {
 }
 
 // Fetch a movie for the moviePage
-export const fetchSpecificMovie = async (id) => {
-    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.API_KEY}`;
+export const fetchSpecificMovie = async (productionID, productionType) => {
+    const url = `https://api.themoviedb.org/3/${productionType}/${productionID}?api_key=${process.env.API_KEY}`;
     const res = await fetch(url);
     const data = res.json();
     return data;
 } 
 
 // Fetch a movie trailer for the moviePage
-export const fetchSpecificMovieTrailers = async (id) => {
-    const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.API_KEY}`;
+export const fetchSpecificProductionTrailers = async (productionID, productionType) => {
+    const url = `https://api.themoviedb.org/3/${productionType}/${productionID}/videos?api_key=${process.env.API_KEY}`;
     const res = await fetch(url);
     const data = await res.json()
     return data;

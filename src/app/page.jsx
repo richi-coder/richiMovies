@@ -22,7 +22,7 @@ export default function Home() {
       </div> */}
     <br />
     <h1>richiMovies</h1>
-      <Link href='/movies'>
+      <Link href='/productions'>
           <button className='bg-slate-500 px-6 py-4 text-white font-bold rounded-md hover:bg-slate-100 hover:text-slate-800 text-3xl transition-all'>
               START APP
           </button>

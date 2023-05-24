@@ -19,7 +19,7 @@ function TopMovies() {
       <p className="w-1/2">{overview}
       </p>
       <Link
-        href={"/movies"}
+        href={"/productions"}
         className="font-bold px-6 py-4 bg-blue-600">
         WATCH NOW
       </Link>
