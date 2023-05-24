@@ -1,6 +1,17 @@
-function StreamingPage() {
+import { fetchSpecificMovieTrailers } from "@/app/services/BackgroundService";
+import YoutubeClient from "./YoutubeClient";
+import Playlist from "./Playlist";
+
+async function StreamingPage({ params }) {
+  const res = await fetchSpecificMovieTrailers(params.movieID);
+  const videoKeys = res.results.map(result => result.key)
   return (
-    <div className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-1/2 h-1/2 z-10'>streaming content...!</div>
+    <div className='w-full flex flex-col'>
+      streaming content...!
+      <YoutubeClient videoKeys={videoKeys} />
+      <Playlist videoKeys={videoKeys} />
+      
+    </div>
   )
 }
 

@@ -30,7 +30,7 @@ function Description({ data, movieID }) {
         <Link
             href={`/movies/${movieID}/streaming`}
             className='font-bold px-6 py-4 bg-blue-600 animate-fade-up'>
-            TRAILER
+            TRAILERS
         </Link>
     </div>
   )

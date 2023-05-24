@@ -13,10 +13,10 @@ async function Background({ backgroundURL }) {
         className='fixed top-0 left-0 h-screen w-screen -z-10 duration-500'
     >
             <Image 
-                // src={`https://image.tmdb.org/t/p/original${backgroundURL}`}
-                // width={1500}
-                // height={750}
-                className='fixed -z-10 w-screen transition-all'
+                src={`https://image.tmdb.org/t/p/original${backgroundURL}`}
+                width={1500}
+                height={750}
+                className='fixed -z-10 w-screen transition-all duration-500'
                 alt={backgroundURL}
                 placeholder='blur'
                 blurDataURL={base64}

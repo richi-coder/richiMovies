@@ -7,6 +7,7 @@ import Details from "./Details";
 async function MoviePage({ params }) {
     const data = await fetchSpecificMovie(params.movieID)
     const backgroundURL = data.backdrop_path || data.poster_path;
+    
   return (
     <div className='flex flex-col'>
       <Background backgroundURL={backgroundURL} />

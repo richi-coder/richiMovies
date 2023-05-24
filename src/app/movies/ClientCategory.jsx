@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 function ClientCategory({ data }) {
+  console.log(data, 'clientCategory');
   const { moviesData, category } = data;
   const scrollerRef = useRef();
   return (

@@ -5,6 +5,7 @@ export const fetchFromClient = async (query) => {
     return data.json();
 }
 
+// Suggestions from client
 export const fetchSuggestions = async () => {
     const data = await fetch('/api/suggestions');
     return data.json()

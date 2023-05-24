@@ -22,5 +22,8 @@ export const fetchSpecificMovie = async (id) => {
 
 // Fetch a movie trailer for the moviePage
 export const fetchSpecificMovieTrailers = async (id) => {
-    const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.API_KEY}`
+    const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.API_KEY}`;
+    const res = await fetch(url);
+    const data = await res.json()
+    return data;
 } 
