@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+[![wakatime](https://wakatime.com/badge/user/2db4d374-00ea-4dca-a30e-e490256172a0/project/b22e3c18-d519-4290-af92-9de9351ea3be.svg)](https://wakatime.com/badge/user/2db4d374-00ea-4dca-a30e-e490256172a0/project/b22e3c18-d519-4290-af92-9de9351ea3be)
+
 First, run the development server:
 
 ```bash
