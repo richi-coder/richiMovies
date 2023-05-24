@@ -25,7 +25,7 @@ function ClientCategory({ data }) {
                   {
                       moviesData.results.map((movie) => (
                       <li key={movie.id} className='w-44 h-fit animate-fade-up overflow-hidden'>
-                          <Link href={`/productions/${movie.id}`} >
+                          <Link href={`/productions/movie/${movie.id}`} >
                           <Image
                           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                           width={200}
