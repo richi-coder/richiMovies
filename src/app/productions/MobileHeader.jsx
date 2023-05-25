@@ -18,6 +18,7 @@ function MobileHeader({ font }) {
 
     const showMobileMenu = () => {
         setShowMenu(!showMenu)
+        showMenu ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'clip'
     }
     
     
