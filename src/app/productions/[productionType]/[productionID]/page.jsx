@@ -15,7 +15,7 @@ async function ProductionPage({ params }) {
       <Background backgroundURL={backgroundURL} />
       <Description data={data} params={params} />
       <Details data={data} />
-      <Suggestions />
+      <Suggestions params={params} />
     </div>
   );
 }

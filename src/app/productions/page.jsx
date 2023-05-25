@@ -9,7 +9,7 @@ export default async function MoviesPage() {
   const moviesData = await fetchTopPageMovies(options[index]);
 
   const topMoviesList =  moviesData.results.map(movie => ({
-    url: movie.poster_path,
+    url: movie.backdrop_path,
     title: movie.original_title,
     overview: movie.overview
   }

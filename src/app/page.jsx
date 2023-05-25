@@ -1,7 +1,5 @@
 import { Limelight } from 'next/font/google'
-import SearchBar from '../components/SearchBar'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const limelight = Limelight({subsets: ['latin'], weight: '400'})
 
