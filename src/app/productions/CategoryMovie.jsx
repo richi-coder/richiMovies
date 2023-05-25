@@ -6,7 +6,7 @@ async function CategoryMovie({category}) {
     const data = {
         moviesData,
         category,
-        productionType: 'tv'
+        productionType: 'movie'
     }
 
   return (

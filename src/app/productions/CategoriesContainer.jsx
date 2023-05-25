@@ -10,11 +10,11 @@ function CategoriesContainer() {
   return (
     <div className="h-full w-full flex flex-col items-start bg-gradient-to-b from-transparent from-0% to-black to-[95vh] overflow-hidden">
       <TopMovies />
-      <h3 className='text-3xl font-bold px-28 py-10 text-slate-200'>Movies</h3>
+      <h3 className='text-3xl font-bold px-28 py-5 text-slate-200'>Movies</h3>
       {
         moviesCategories.map(category => <CategoryMovie key={category} category={category} />)
       }
-      <h3 className='text-3xl font-bold px-28 py-10 text-slate-200'>Series</h3>
+      <h3 className='text-3xl font-bold px-28 py-5 text-slate-200'>Series</h3>
       {
         seriesCategories.map(category => <CategorySeries key={category} category={category} />)
       }
