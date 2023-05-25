@@ -1,15 +1,22 @@
 import React from 'react'
 import TopMovies from './TopMovies'
-import Category from './Category'
+import CategoryMovie from './CategoryMovie'
+import CategorySeries from './CategorySeries';
 
-const categories = ['now_playing', 'popular', 'top_rated', 'upcoming'];
+const moviesCategories = ['now_playing', 'popular', 'top_rated', 'upcoming'];
+const seriesCategories = ['popular', 'top_rated']
 
 function CategoriesContainer() {
   return (
     <div className="h-full w-full flex flex-col items-start bg-gradient-to-b from-transparent from-0% to-black to-[95vh] overflow-hidden">
       <TopMovies />
+      <h3 className='text-3xl font-bold px-28 py-10 text-slate-200'>Movies</h3>
       {
-        categories.map(category => <Category key={category} category={category} />)
+        moviesCategories.map(category => <CategoryMovie key={category} category={category} />)
+      }
+      <h3 className='text-3xl font-bold px-28 py-10 text-slate-200'>Series</h3>
+      {
+        seriesCategories.map(category => <CategorySeries key={category} category={category} />)
       }
     </div>
   )

@@ -1,11 +1,12 @@
 import { fetchCategoriesMovies, fetchData } from "../services/BackgroundService";
 import ClientCategory from "./ClientCategory";
 
-async function Category({category}) {
+async function CategoryMovie({category}) {
     const moviesData = await fetchCategoriesMovies(category)
     const data = {
         moviesData,
-        category
+        category,
+        productionType: 'tv'
     }
 
   return (
@@ -13,4 +14,4 @@ async function Category({category}) {
   );
 }
 
-export default Category;
+export default CategoryMovie;

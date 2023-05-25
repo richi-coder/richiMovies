@@ -12,6 +12,18 @@ export const fetchCategoriesMovies = async (category) => {
     return data;
 }
 
+// Fetch tv series by categories at homepage
+export const fetchCategoriesSeries = async (category) => {
+    const url = `https://api.themoviedb.org/3/tv/${category}`;
+    const fetchMethod = {
+        next: {
+            revalidate: 30000
+        }
+    }
+    const data = await fetchData(url, fetchMethod);
+    return data;
+}
+
 // Fetch a movie for the moviePage
 export const fetchSpecificMovie = async (productionID, productionType) => {
     const url = `https://api.themoviedb.org/3/${productionType}/${productionID}?api_key=${process.env.API_KEY}`;

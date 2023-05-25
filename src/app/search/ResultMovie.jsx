@@ -4,13 +4,14 @@ import React, { Suspense } from "react";
 import FallbackMovie from "./FallbackMovie";
 
 function ResultMovie({ searchedMovie: movie }) {
+  const imageURL = movie.poster_path || movie.backdrop_path;
   return (
     <li className="w-44 h-fit animate-fade-up overflow-hidden mx-auto">
       <Link href={`/productions/${movie.media_type}/${movie.id}`} className='h-fit'>
     {
-        movie.poster_path ?
+        imageURL ?
         <Image
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w500${imageURL}`}
           width={200}
           height={300}
           alt={movie.id}
