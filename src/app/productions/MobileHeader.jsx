@@ -22,7 +22,7 @@ function MobileHeader({ font }) {
     
     
   return (
-    <div className={`sm:hidden flex flex-row w-full h-[10vh] transition-all duration-500 text-xl ${backgroundScrollClass}`}>
+    <div className={`sm:hidden flex flex-row w-full h-[7vh] transition-all duration-500 text-xl ${backgroundScrollClass}`}>
         <div className='flex flex-row w-full h-full items-center pl-8 gap-5'>
             <button onClick={showMobileMenu}><FaList /></button>
             <Link href={'/productions'}>
