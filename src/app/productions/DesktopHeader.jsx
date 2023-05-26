@@ -7,7 +7,7 @@ import { FaSearch } from "react-icons/fa";
 function DesktopHeader({ font }) {
     const [backgroundScrollClass, setBackgroundScrollClass] = useState('backdrop-blur-0 bg-transparent');
     const [productionChoice, setProductionChoice] = useState('')
-    const router = useRouter()
+    const router = useRouter();
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -15,32 +15,38 @@ function DesktopHeader({ font }) {
                     setBackgroundScrollClass('backdrop-blur bg-[rgba(0,0,0,0.7)]') :
                     setBackgroundScrollClass('backdrop-blur-0 bg-transparent')
         }) 
+        setProductionChoice(window.location.pathname)
     }, [])
 
     const navigateProductions = (productionType) => {
         router.push(`/productions/${productionType}`);
-        setProductionChoice(productionType)
+        if (productionType === '') {
+            setProductionChoice('')
+            return
+        }
+        setProductionChoice(`/productions/${productionType}`)
     }
     
     
   return (
     <div className={`sm:flex sm:flex-row w-full h-[7vh] hidden transition-all duration-500 text-lg ${backgroundScrollClass}`}>
         <div className='flex flex-row w-3/4 h-full items-center pl-24 gap-5'>
-            <Link href={'/productions'}>
+            <button
+                onClick={() => navigateProductions('')}>
                 <h1 className={`${font.className}`}>richiTrailers</h1>
-            </Link>
+            </button>
             <Link href={'/'}>
                 <p>Home</p>
             </Link>
             <button 
                 onClick={() => navigateProductions('movie')}
-                className={productionChoice === 'movie' ? 'font-bold' : ''}
+                className={productionChoice === '/productions/movie' ? 'font-bold' : ''}
                 >
                 Movies
             </button>
             <button
                onClick={() => navigateProductions('tv')}
-               className={productionChoice === 'tv' ? 'font-bold' : ''}
+               className={productionChoice === '/productions/tv' ? 'font-bold' : ''}
                >
                 Series
             </button>

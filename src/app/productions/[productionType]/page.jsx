@@ -4,13 +4,17 @@ import { fetchProductionsPage } from "@/app/services/ClientService";
 
 async function ProductionTypePage({ params }) {
   const res = await fetchProductionsPage(params.productionType);
-  console.log(res, 'CLIEENT TYPE');
+  const data = res.results;
+  const productions = data.map(item => ({
+    ...item,
+    media_type: params.productionType
+  }))
 
   return (
     <div className='w-full flex flex-col pt-20'>
       <h3 className='text-3xl font-bold px-12 sm:px-28 py-5 text-slate-200'>{params.productionType === 'movie' ? 'Movies' : 'Series'}</h3>
       <hr className='mx-24 border-[rgb(236,72,153)]' />
-      <SearchResults searchedMovies={res.results} />
+      <SearchResults searchedMovies={productions} />
     </div>
   )
 }
