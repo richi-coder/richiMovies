@@ -14,7 +14,7 @@ function Description({ data, params }) {
     }
 
   return (
-    <div className={`w-full h-[75vh] sm:h-[60vh] md:h-[60vh] lg:h-[90vh] px-10 sm:px-24 pb-6 flex flex-col items-start justify-end gap-4 sm:gap-8 bg-gradient-to-t from-black from-35% sm:from-0% to-transparent to-60% sm:to-15%`}>
+    <div className={`w-full h-[75vh] sm:h-[60vh] md:h-[60vh] lg:h-[90vh] px-10 sm:px-24 pb-6 flex flex-col items-start justify-end gap-4 sm:gap-8 bg-gradient-to-t from-black from-35% sm:from-0% md:from-0% to-transparent to-60% sm:to-15% md:to-50%`}>
         <h2 className="font-bold text-3xl sm:text-5xl animate-fade-up">
             {data.title || data.name}
         </h2>

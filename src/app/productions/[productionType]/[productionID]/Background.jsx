@@ -16,7 +16,7 @@ async function Background({ backgroundURL }) {
                 src={`https://image.tmdb.org/t/p/original${backgroundURL}`}
                 width={1500}
                 height={950}
-                className='-z-10 transition-all duration-500'
+                className='-z-10 transition-all duration-500 w-screen'
                 alt={backgroundURL}
                 placeholder='blur'
                 blurDataURL={base64}
