@@ -22,7 +22,7 @@ function DetailComponent({ title, detail }) {
                   -&gt;
                 </span> */}
               </h2>
-              <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+              <p className={`mx-auto sm:m-0 max-w-[30ch] text-sm opacity-50`}>
                 {detailToShow}
               </p>
         </div> :

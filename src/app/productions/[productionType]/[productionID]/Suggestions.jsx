@@ -13,11 +13,11 @@ function Suggestions({ params }) {
     }, [])
     
   return (
-    <div className='w-full bg-black py-24'>
+    <div className='w-full bg-black py-12 sm:py-24'>
     {
         suggestedMovies ?
         <div>
-            <p className='text-3xl pl-24 font-bold mb-16'>Suggestions</p>
+            <p className='text-3xl pl-12 sm:pl-24 font-bold mb-16'>Suggestions</p>
             <ClientCategory data={{moviesData: suggestedMovies, category: 'TRENDING', productionType: params.productionType}} />
         </div> :
         null

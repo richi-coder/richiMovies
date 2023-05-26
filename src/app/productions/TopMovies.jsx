@@ -13,9 +13,9 @@ function TopMovies() {
   }, [title])
 
   return (
-    <div className={`w-full h-[60vh] sm:h-[70vh]  px-12 sm:px-24 pb-5 flex flex-col items-start justify-end gap-8 ${animationClassname}`}>
-      <h2 className="font-bold -mb-4 text-3xl sm:text-5xl transition-all duration-500">{title}</h2>
-      <p className="w-full sm:w-1/2">
+  <div className={`w-full h-[60vh] sm:h-[60vh] md:h-[50vh] lg:h-[70vh] px-12 md:px-24 pb-5 flex flex-col items-start justify-end gap-8 ${animationClassname}`}>
+      <h2 className="font-bold -mb-4 text-3xl md:text-5xl transition-all duration-500">{title}</h2>
+      <p className="w-full md:w-1/2">
         {`${overview.slice(0,74)} . . .`}
       </p>
       <Link

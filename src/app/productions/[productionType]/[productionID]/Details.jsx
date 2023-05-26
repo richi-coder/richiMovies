@@ -2,9 +2,9 @@ import DetailComponent from './DetailComponent'
 
 function Details({ data }) {
   return (
-    <div className='w-full pt-24 bg-black'>
-        <p className='text-3xl pl-24 font-bold mb-16'>Details</p>
-        <div className='mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left px-24 gap-y-16 gap-x-5'>
+    <div className='w-full pt-6 sm:pt-24 bg-black -mt-2'>
+        <p className='text-3xl pl-12 sm:pl-24 font-bold py-5'>Details</p>
+        <div className='pb-5 sm:pb-10 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left px-0 sm:px-24 gap-y-8 sm:gap-y-16 gap-x-5'>
             <DetailComponent title='Adult' detail={data.adult} />
             <DetailComponent title='Genres' detail={data.genres} />
             <DetailComponent title='First Air Date' detail={data.first_air_date} />

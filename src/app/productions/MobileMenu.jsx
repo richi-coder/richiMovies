@@ -21,7 +21,9 @@ function MobileMenu({ showMobileMenu, font, navigateMobileMenu }) {
                         Search <FaSearch />
                     </div>
                 </button>
-                <button href={'/'} className="w-full">Home</button>
+                <button 
+                    onClick={() => navigateMobileMenu('/')}
+                    className="w-full">Home</button>
                 <button
                     onClick={() => navigateMobileMenu('/productions/movie')}
                     className="w-full">

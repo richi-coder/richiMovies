@@ -1,26 +1,35 @@
 'use client'
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
 
 function YoutubeClient({ videoKeys, params }) {
     const [index, setIndex] = useState(0);
-    const width = 1000;
-    const height = width * 9 / 16;
-
-
-    const opts = {
-        height,
-        width,
+    const [mount, setMount] = useState(false)
+    const [opts, setOpts] = useState({
+        width: 1000,
+        height: 1000 * 9 / 16,
         playerVars: {
           autoplay: 1,
         },
-      }
-
+    })
     const onPlayerReady = (e) => {
-        e.target.playVideo()
+      e.target.playVideo()
     }
-
+    
+    useEffect(() => {
+      if (window.innerWidth < 1000) {
+        setOpts({
+          width: window.innerWidth,
+          height: window.innerWidth * 9 / 16,
+          playerVars: {
+            autoplay: 1,
+          },
+        })
+      }
+      setMount(true)
+    }, [])
+    
     function videoEnded() {
         if (index === videoKeys.length - 1) {
             setIndex(0)
@@ -33,7 +42,10 @@ function YoutubeClient({ videoKeys, params }) {
     <div className='w-full flex flex-col items-center'>
       {
         videoKeys[0] ?
-      <YouTube
+        <>
+      {
+        mount ?
+        <YouTube
           videoId={videoKeys[index]}                  // defaults -> ''
           // id={string}                       // defaults -> ''
           className='pt-20'                // defaults -> ''
@@ -42,7 +54,7 @@ function YoutubeClient({ videoKeys, params }) {
           // title={string}                    // defaults -> ''
           // loading={string}                  // defaults -> undefined
           opts={opts}                        // defaults -> {}
-          onReady={onPlayerReady}                    // defaults -> noop
+          onReady={mount ? onPlayerReady : null}                    // defaults -> noop
           onPlay={() => console.log('PLYAAAAING')}                     // defaults -> noop
           // onPause={func}                    // defaults -> noop
           onEnd={videoEnded}                      // defaults -> noop
@@ -51,6 +63,9 @@ function YoutubeClient({ videoKeys, params }) {
           // onPlaybackRateChange={func}       // defaults -> noop
           // onPlaybackQualityChange={func}    // defaults -> noop
         /> :
+        null
+        }
+        </> :
         <div className='h-screen w-screen relative text-5xl'>
           <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-10'>
             <p>No clips available . . .</p>
