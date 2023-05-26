@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
 
-function YoutubeClient({ videoKeys, params }) {
-    const [index, setIndex] = useState(0);
+function YoutubeClient({ videoKeys, params, videoEnded, index }) {
     const [mount, setMount] = useState(false)
     const [opts, setOpts] = useState({
         width: 1000,
@@ -13,6 +12,7 @@ function YoutubeClient({ videoKeys, params }) {
           autoplay: 1,
         },
     })
+    
     const onPlayerReady = (e) => {
       e.target.playVideo()
     }
@@ -30,14 +30,7 @@ function YoutubeClient({ videoKeys, params }) {
       setMount(true)
     }, [])
     
-    function videoEnded() {
-        if (index === videoKeys.length - 1) {
-            setIndex(0)
-            return
-        }
-        setIndex(index + 1)
-    }
-
+    
   return (
     <div className='w-full flex flex-col items-center'>
       {
