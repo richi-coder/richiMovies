@@ -1,12 +1,14 @@
 'use client'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { FaHamburger, FaList, FaSearch } from "react-icons/fa";
+import { FaList } from "react-icons/fa";
 import MobileMenu from './MobileMenu';
+import { useRouter } from 'next/navigation';
 
 function MobileHeader({ font }) {
     const [backgroundScrollClass, setBackgroundScrollClass] = useState('backdrop-blur-0 bg-transparent')
     const [showMenu, setShowMenu] = useState(false)
+    const router = useRouter();
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -16,8 +18,15 @@ function MobileHeader({ font }) {
         }) 
     }, [])
 
+    const navigateMobileMenu = (path) => {
+        router.push(path)
+        setTimeout(() => {
+            showMobileMenu()
+        }, 300);
+    }
+
     const showMobileMenu = () => {
-        setShowMenu(!showMenu)
+        showMenu ? setShowMenu(false) : setShowMenu(true)
         showMenu ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'clip'
     }
     
@@ -31,7 +40,7 @@ function MobileHeader({ font }) {
             </Link>
             {
                 showMenu ?
-                <MobileMenu showMobileMenu={showMobileMenu} font={font} /> :
+                <MobileMenu showMobileMenu={showMobileMenu} font={font} navigateMobileMenu={navigateMobileMenu} /> :
                 null
             }
         </div>

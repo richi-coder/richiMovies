@@ -11,7 +11,8 @@ export default async function MoviesPage() {
   const topMoviesList =  moviesData.results.map(movie => ({
     url: movie.backdrop_path,
     title: movie.original_title,
-    overview: movie.overview
+    overview: movie.overview,
+    id: movie.id
   }
   )).slice(0,5);
 
