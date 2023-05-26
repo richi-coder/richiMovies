@@ -1,10 +1,13 @@
 'use client'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react'
 import { FaSearch } from "react-icons/fa";
 
 function DesktopHeader({ font }) {
-    const [backgroundScrollClass, setBackgroundScrollClass] = useState('backdrop-blur-0 bg-transparent')
+    const [backgroundScrollClass, setBackgroundScrollClass] = useState('backdrop-blur-0 bg-transparent');
+    const [productionChoice, setProductionChoice] = useState('')
+    const router = useRouter()
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -13,6 +16,11 @@ function DesktopHeader({ font }) {
                     setBackgroundScrollClass('backdrop-blur-0 bg-transparent')
         }) 
     }, [])
+
+    const navigateProductions = (productionType) => {
+        router.push(`/productions/${productionType}`);
+        setProductionChoice(productionType)
+    }
     
     
   return (
@@ -24,12 +32,18 @@ function DesktopHeader({ font }) {
             <Link href={'/'}>
                 <p>Home</p>
             </Link>
-            <Link href={'/productions/movie'}>
+            <button 
+                onClick={() => navigateProductions('movie')}
+                className={productionChoice === 'movie' ? 'font-bold' : ''}
+                >
                 Movies
-            </Link>
-            <Link href={'/productions/tv'}>
+            </button>
+            <button
+               onClick={() => navigateProductions('tv')}
+               className={productionChoice === 'tv' ? 'font-bold' : ''}
+               >
                 Series
-            </Link>
+            </button>
             <Link href={'/search'}>
                 <FaSearch />
             </Link>

@@ -4,7 +4,7 @@ import CategoryMovie from './CategoryMovie'
 import CategorySeries from './CategorySeries';
 
 const moviesCategories = ['now_playing', 'popular', 'top_rated', 'upcoming'];
-const seriesCategories = ['popular', 'top_rated']
+const seriesCategories = ['popular', 'top_rated', 'airing_today']
 
 function CategoriesContainer() {
   return (

@@ -14,7 +14,7 @@ function ClientCategory({ data }) {
             <Button positionClassname={'left-0 translate-x-7 sm:translate-x-14'} scrollerRef={scrollerRef} />
             <Button positionClassname={'right-0 -translate-x-7'} scrollerRef={scrollerRef} />
             <p className='font-bold text-xl mb-4'>
-                {category === 'upcoming' ? 'Playing soon' : category === 'top_rated' ? 'Top productions' : category === 'popular' ? 'Popular productions' : category === 'now_playing' ? 'Now playing' : ''}
+                {category === 'upcoming' ? 'Playing soon' : category === 'top_rated' ? 'Top productions' : category === 'popular' ? 'Popular productions' : category === 'now_playing' ? 'Now playing' : category === 'airing_today' ? 'On the air' : ''}
             </p>
 
             {/* ScrollerCategory down here */}

@@ -10,3 +10,11 @@ export const fetchSuggestions = async () => {
     const data = await fetch('/api/suggestions');
     return data.json()
 }
+
+// Fetching movies for moviesPage
+export const fetchProductionsPage = async (mediatype) => {
+    const data = await fetch(`/api/productions?mediatype=${mediatype}`);
+    return data.json();
+}
+
+// Fetching series for seriesPage
