@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <main className="overflow-clip w-screen h-screen">
       <div className="fixed bottom-0 translate-y-24 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center gap-y-12 sm:gap-y-16  w-full h-full overflow-clip">
-          <h1 className={`${limelight.className} text-3xl sm:text-6xl animate-fade-up`}>richiTrailers</h1>
-          <div className='flex flex-col sm:flex-row items-center gap-y-5 gap-x-10 h-fit animate-fade-up'>
+          <h1 className={`${limelight.className} text-3xl sm:text-6xl animate-fade-up opacity-0`} style={{animationDelay: 0, animationFillMode: 'forwards'}}>richiTrailers</h1>
+          <div className='flex flex-col sm:flex-row items-center gap-y-5 gap-x-10 h-fit animate-fade-up opacity-0' style={{animationDelay: '0.15s', animationFillMode: 'forwards'}}>
             <Link href='/productions'>
                 <button className='bg-[rgb(236,72,153)] hover:bg-[rgb(266,102,183)] sm:hover:translate-y-2 px-6 py-4 text-white font-bold text-lg sm:text-3xl transition-all'>
                     GO WATCHING
