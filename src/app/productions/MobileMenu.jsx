@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { FaSearch } from "react-icons/fa"
+import { ImCross } from "react-icons/im"
 
 function MobileMenu({ showMobileMenu, font, navigateMobileMenu }) {
 
@@ -7,7 +8,7 @@ function MobileMenu({ showMobileMenu, font, navigateMobileMenu }) {
     <div className='fixed top-0 left-0 w-screen h-screen bg-black transition-all animate-fade-up'>
         <div className='flex flex-col items-center w-screen h-screen top-0 left-0'>
             <button onClick={showMobileMenu} className='font-bold text-2xl w-full py-8 text-left px-6'>
-                X
+                <ImCross />
             </button>
             <div className='flex flex-col items-center w-full gap-5'>
                 <button

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { fetchFromClient } from "../services/ClientService";
 import SearchResults from "./SearchResults";
 import Link from "next/link";
+import { ImCross } from "react-icons/im"
 
 function Search() {
   const [query, setQuery] = useState('');
@@ -30,7 +31,9 @@ function Search() {
           placeholder="Search"
           autoFocus
         />
-        <Link href={'/productions'}><i className="absolute top-1/2 -translate-y-1/2 right-0">X</i></Link>
+        <Link href={'/productions'} className="absolute top-1/2 -translate-y-1/2 right-0">
+          <ImCross />
+        </Link>
       </form>
       <SearchResults searchedMovies={searchedMovies} />
     </div>
