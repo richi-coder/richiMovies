@@ -7,15 +7,17 @@ async function HomePosters() {
     const homePosters = data.results;
 
   return (
-    <div className="w-fit gap-x-20 grid lg:mb-0 lg:grid-cols-4 animate-fade-up mx-auto content-center opacity-0" style={{animationDelay: '0.50s', animationFillMode: 'forwards'}}>
+    <div className="w-fit gap-x-1 sm:gap-x-20 gap- grid lg:mb-0 grid-cols-2 lg:grid-cols-4 animate-fade-up mx-auto content-center opacity-0" style={{animationDelay: '0.50s', animationFillMode: 'forwards'}}>
         {
             homePosters.slice(0,4).map(homePoster => 
-                <Image
-                src={`https://image.tmdb.org/t/p/w500${homePoster.poster_path}`}
-                width={250}
-                height={300}
-                alt={homePoster.overview}
-                />
+                <div className='w-fit sm:overflow-auto sm:h-fit -mb-14'>
+                    <Image
+                    src={`https://image.tmdb.org/t/p/w500${homePoster.poster_path}`}
+                    width={250}
+                    height={300}
+                    alt={homePoster.overview}
+                    />
+                </div>
             )
         }
     </div>

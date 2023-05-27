@@ -10,7 +10,7 @@ function ClientCategory({ data }) {
   const { moviesData, category, productionType } = data;
   const scrollerRef = useRef();
   return (
-    <div className='h-[350px] px-8 sm:px-20 w-full relative'>
+    <div className='h-[350px] px-8 sm:px-20 w-full relative animate-fade-up opacity-0' style={{animationDelay: '1s', animationFillMode: 'forwards'}}>
             <Button positionClassname={'left-0 translate-x-7 sm:translate-x-14'} scrollerRef={scrollerRef} />
             <Button positionClassname={'right-0 -translate-x-7'} scrollerRef={scrollerRef} />
             <p className='font-bold text-xl mb-4'>
@@ -24,7 +24,7 @@ function ClientCategory({ data }) {
                       className='flex flex-row h-full w-fit gap-x-5'>
                   {
                       moviesData.results.map((movie) => (
-                      <li key={movie.id} className='w-44 h-fit animate-fade-up overflow-hidden'>
+                      <li key={movie.id} className='w-44 h-fit overflow-hidden'>
                           <Link href={`/productions/${productionType}/${movie.id}`} >
                           <Image
                           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
