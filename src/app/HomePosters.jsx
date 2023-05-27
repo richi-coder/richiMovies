@@ -7,7 +7,7 @@ async function HomePosters() {
     const homePosters = data.results;
 
   return (
-    <div className="relative bottom-0 translate-y-10 left-1/2 -translate-x-1/2 w-full gap-x-10 grid lg:mb-0 lg:grid-cols-4 content-center">
+    <div className="w-fit gap-x-20 grid lg:mb-0 lg:grid-cols-4 animate-fade-up mx-auto content-center">
         {
             homePosters.slice(0,4).map(homePoster => 
                 <Image
