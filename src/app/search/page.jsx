@@ -13,21 +13,27 @@ function Search() {
     searchedProductions: []
   });
 
-  const searchMovies = async (e) => {
+  const searchMovies = (e) => {
     e.preventDefault();
-    
-    const { data } = await fetchFromClient(query.input);
     setQuery({
-      query,
-      state: true,
-      searchedProductions: data.results
+      ...query,
+      state: false
     })
+    fetchFromClient(query.input)
+        .then(res => {
+          setQuery({
+            ...query,
+            state: true,
+            searchedProductions: res.data.results
+          })
+        })
+    
   }
 
   const saveSearch = ({ target }) => {
     setQuery({
+      ...query,
       input: target.value,
-      state: false
     })
   }
 

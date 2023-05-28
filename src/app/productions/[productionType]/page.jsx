@@ -1,4 +1,3 @@
-import ClientLoader from "@/app/ClientLoader";
 import SearchResults from "@/app/search/SearchResults";
 import { fetchProductionTypePage } from "@/app/services/BackgroundService";
 
