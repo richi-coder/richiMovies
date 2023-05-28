@@ -8,10 +8,9 @@ const limelight = Limelight({subsets: ['latin'], weight: '400'})
 
 function Header() {
   const [showScroll, setShowScroll] = useState('')
-  let direction = 0;
 
   useEffect(() => {
-    // direction = window.pageYOffset
+    let direction = 0;
     window.addEventListener('scroll', (e) => {
       window.scrollY > direction ? setShowScroll('-translate-y-full') : setShowScroll('')
       direction = window.scrollY
