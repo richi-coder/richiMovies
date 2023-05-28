@@ -1,23 +1,10 @@
-'use client'
+import ClientLoader from "@/app/ClientLoader";
 import SearchResults from "@/app/search/SearchResults";
-import { fetchProductionsPage } from "@/app/services/ClientService";
-import { useEffect, useState } from "react";
+import { fetchProductionTypePage } from "@/app/services/BackgroundService";
 
 async function ProductionTypePage({ params }) {
-  const [productions, setProductions] = useState(null)
-  
-
-  useEffect(() => {
-    // fetchProductionsPage(params.productionType)
-    //       .then(res => {
-    //         const data = res.results;
-    //         setProductions(data.map(item => ({
-    //             ...item,
-    //             media_type: params.productionType
-    //           })))
-    //       })
-  }, [])
-  
+    const res = await fetchProductionTypePage(params.productionType);
+    const productions = res.results;
 
   return (
     <div className='w-full flex flex-col pt-20'>
@@ -28,11 +15,7 @@ async function ProductionTypePage({ params }) {
       </h3>
       <hr className='mx-24 border-[rgb(236,72,153)]' />
       <>
-      {
-        productions ?
-        <SearchResults searchedMovies={productions} /> :
-        null
-      }
+      <SearchResults searchedMovies={productions} />
       </>
     </div>
   )

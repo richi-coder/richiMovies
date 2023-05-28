@@ -4,20 +4,31 @@ import { fetchFromClient } from "../services/ClientService";
 import SearchResults from "./SearchResults";
 import Link from "next/link";
 import { ImCross } from "react-icons/im"
+import ClientLoader from "../ClientLoader";
 
 function Search() {
-  const [query, setQuery] = useState('');
-  const [searchedMovies, setSearchedMovies] = useState([])
+  const [query, setQuery] = useState({
+    input: '',
+    state: null,
+    searchedProductions: []
+  });
 
   const searchMovies = async (e) => {
     e.preventDefault();
-    const { data } = await fetchFromClient(query);
-    console.log(data, 'SEARCH PAGE');
-    setSearchedMovies(data.results)
+    
+    const { data } = await fetchFromClient(query.input);
+    setQuery({
+      query,
+      state: true,
+      searchedProductions: data.results
+    })
   }
 
   const saveSearch = ({ target }) => {
-    setQuery(target.value)
+    setQuery({
+      input: target.value,
+      state: false
+    })
   }
 
   return (
@@ -26,7 +37,7 @@ function Search() {
         <input
           className="bg-transparent text-white w-full text-3xl sm:text-5xl py-10 border-b-2 border-white mx-auto outline-none"
           type="text"
-          value={query}
+          value={query.input}
           onChange={saveSearch}
           placeholder="Search"
           autoFocus
@@ -35,7 +46,13 @@ function Search() {
           <ImCross />
         </Link>
       </form>
-      <SearchResults searchedMovies={searchedMovies} />
+      {
+        query.state ?
+        <SearchResults searchedMovies={query.searchedProductions} /> :
+        query.state === false ?
+        <ClientLoader /> :
+        null
+      }
     </div>
   );
 }

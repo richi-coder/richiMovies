@@ -39,3 +39,11 @@ export const fetchSpecificProductionTrailers = async (productionID, productionTy
     const data = await res.json()
     return data;
 } 
+
+// Fetching productions for productionsType PAGE
+export const fetchProductionTypePage = async (mediatype) => {
+    const url = `https://api.themoviedb.org/3/discover/${mediatype}?api_key=${process.env.API_KEY}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    return data;
+}
