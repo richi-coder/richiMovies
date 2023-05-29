@@ -1,18 +1,15 @@
 <a href="https://richi-trailers.vercel.app/">
-  <img alt="richiTrailers – Watch you favorite production trailers" src="https://precedent.dev/opengraph-image">
+  <img alt="richiTrailers – Watch your favorite production trailers!" src="https://raw.githubusercontent.com/richi-coder/richiMovies/main/public/richiTrailersLogo.png">
   <h1 align="center">richiTrailers</h1>
 </a>
 
 <p align="center">
-  Building blocks for your Next project
+  Watch your favorite production trailers!
 </p>
 
 <p align="center">
   <a href="https://twitter.com/steventey">
-    <img src="https://img.shields.io/twitter/follow/steventey?style=flat&label=steventey&logo=twitter&color=0bf&logoColor=fff" alt="Steven Tey Twitter follower count" />
-  </a>
-  <a href="https://github.com/steven-tey/precedent">
-    <img src="https://img.shields.io/github/stars/steven-tey/precedent?label=steven-tey%2Fprecedent" alt="Precedent repo star count" />
+    <img src="https://img.shields.io/twitter/follow/RichiCoder?style=flat&label=steventey&logo=twitter&color=0bf&logoColor=fff" alt="richiCoder" />
   </a>
 </p>
 
