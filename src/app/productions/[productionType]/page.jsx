@@ -3,7 +3,10 @@ import { fetchProductionTypePage } from "@/app/services/BackgroundService";
 
 async function ProductionTypePage({ params }) {
     const res = await fetchProductionTypePage(params.productionType);
-    const productions = res.results;
+    const productions = res.results.map(result => ({
+      ...result,
+      media_type: params.productionType
+    }))
 
   return (
     <div className='w-full flex flex-col pt-20'>

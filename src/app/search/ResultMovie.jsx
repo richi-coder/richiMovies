@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { Suspense } from "react";
 import FallbackMovie from "./FallbackMovie";
 
 function ResultMovie({ searchedMovie: movie }) {
