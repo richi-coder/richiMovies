@@ -1,6 +1,7 @@
 import { fetchTopPageMovies } from "../services/OnDemandService";
 import BackgroudMovie from "./BackgroudMovie";
 import CategoriesContainer from "./CategoriesContainer";
+import Footer from "./Footer";
 import TopContext from "./TopContext";
 
 export default async function MoviesPage() {
@@ -20,6 +21,7 @@ export default async function MoviesPage() {
     <TopContext topMoviesList={topMoviesList}>
       <BackgroudMovie />
       <CategoriesContainer />
+      <Footer />
     </TopContext>
   )
 }
