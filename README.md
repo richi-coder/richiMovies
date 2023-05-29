@@ -22,7 +22,9 @@
 
 ## Introduction
 
-Precedent is an opinionated collection of components, hooks, and utilities for your Next.js project.
+richiTrailers is a project for showing up Next.js capabilities as a frontend developer.
+From client side rendering to pre-rendering React components, this trailers app takes the best utilities from Next.js
+framework.
 
 ## One-click Deploy
 
