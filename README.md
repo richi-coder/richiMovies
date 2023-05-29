@@ -37,6 +37,7 @@ framework.
 ### Platforms
 
 - [Vercel](https://vercel.com/) – Easily preview & deploy changes with git
+- [TMDB](https://www.themoviedb.org) – Great movie database to develop apps
 
 ### UI
 
