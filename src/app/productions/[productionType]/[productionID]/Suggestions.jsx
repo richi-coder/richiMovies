@@ -8,7 +8,10 @@ function Suggestions({ params }) {
     const [suggestedMovies, setSuggestedMovies] = useState(null)
 
     useEffect(() => {
-        fetchSuggestions().then(res => setSuggestedMovies(res.data))
+        fetchSuggestions().then(res => {
+          setSuggestedMovies(res.data)
+          console.log(res, 'SUGGGGGEST');
+        })
         console.log(params, 'suggrs');
     }, [])
     
@@ -18,7 +21,7 @@ function Suggestions({ params }) {
         suggestedMovies ?
         <div>
             <p className='text-3xl pl-12 sm:pl-24 font-bold mb-16'>Suggestions</p>
-            <ClientCategory data={{moviesData: suggestedMovies, category: 'TRENDING', productionType: params.productionType}} />
+            <ClientCategory data={{moviesData: suggestedMovies, category: 'TRENDING'}} />
         </div> :
         null
     }
