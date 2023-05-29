@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function ClientCategory({ data }) {
   console.log(data, 'clientCategory');
-  const { moviesData, category } = data;
+  const { moviesData, category, productionType } = data;
   const scrollerRef = useRef();
   return (
     <div className='h-[350px] px-8 sm:px-20 w-full relative animate-fade-up opacity-0' style={{animationDelay: '1s', animationFillMode: 'forwards'}}>
@@ -25,7 +25,7 @@ function ClientCategory({ data }) {
                   {
                       moviesData.results.map((movie) => (
                       <li key={movie.id} className='w-44 h-fit overflow-hidden'>
-                          <Link href={`/productions/${movie.media_type}/${movie.id}`} >
+                          <Link href={`/productions/${movie.media_type || productionType}/${movie.id}`} >
                           <Image
                           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                           width={200}
