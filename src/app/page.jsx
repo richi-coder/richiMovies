@@ -2,7 +2,7 @@ import { Limelight } from 'next/font/google'
 import Link from 'next/link'
 import HomePosters from './HomePosters'
 
-const limelight = Limelight({subsets: ['latin'], weight: '400'})
+export const limelight = Limelight({subsets: ['latin'], weight: '400'})
 
 export default function Home() {
   return (
