@@ -5,10 +5,8 @@ import Suggestions from "./Suggestions";
 import Details from "./Details";
 
 async function ProductionPage({ params }) {
-  console.log('productionID', params);
     const data = await fetchSpecificMovie(params.productionID, params.productionType)
     const backgroundURL = data.backdrop_path || data.poster_path;
-    console.log(data, 'URL production PAGE');
     
   return (
     <div className='flex flex-col'>

@@ -1,4 +1,3 @@
-import React from 'react'
 import TopMovies from './TopMovies'
 import CategoryMovie from './CategoryMovie'
 import CategorySeries from './CategorySeries';
