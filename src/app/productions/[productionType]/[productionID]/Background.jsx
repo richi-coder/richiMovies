@@ -10,7 +10,7 @@ async function Background({ backgroundURL }) {
 
   return (
     <div
-        className='fixed top-0 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 h-screen w-[200vw] sm:w-screen -z-10 duration-500'
+        className='fixed top-0 left-1/2 -translate-x-1/4 sm:left-0 sm:translate-x-0 h-screen w-[200vw] sm:w-screen -z-10 duration-500'
     >
             <Image 
                 src={`https://image.tmdb.org/t/p/original${backgroundURL}`}

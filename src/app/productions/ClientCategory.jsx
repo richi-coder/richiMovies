@@ -1,9 +1,11 @@
 'use client'
 
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 import Button from "./Button"
 import Image from "next/image";
 import Link from "next/link";
+import ProductionCategory from "./ProductionCategory";
+import ProductionsCategory from "./ProductionsCategory";
 
 function ClientCategory({ data }) {
   console.log(data, 'clientCategory');
@@ -22,22 +24,7 @@ function ClientCategory({ data }) {
                 className='overflow-x-scroll overflow-y-clip h-full w-full relative'>
                   <ul 
                       className='flex flex-row h-full w-fit gap-x-5'>
-                  {
-                      moviesData.results.map((movie) => (
-                      <li key={movie.id} className='w-44 h-fit overflow-hidden'>
-                          <Link href={`/productions/${movie.media_type || productionType}/${movie.id}`} >
-                          <Image
-                          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                          width={200}
-                          height={300}
-                          alt={movie.id}
-                          placeholder="empty"
-                          className='transition-transform duration-200 hover:scale-105'
-                          />
-                          </Link>
-                      </li>
-                      ))
-                  }
+                      <ProductionsCategory moviesData={moviesData} productionType={productionType} />
                   </ul>
             </div>
     </div>
