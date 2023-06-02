@@ -1,9 +1,6 @@
 import Image from "next/image";
 
 function ProductionCategory({ movie }) {
-    const options = {
-        size: 10
-    }
   return (
       <Image
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
