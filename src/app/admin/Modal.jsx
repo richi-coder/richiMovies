@@ -1,13 +1,10 @@
 "use client";
 
 import {
-  Dispatch,
-  SetStateAction,
   useCallback,
   useEffect,
   useRef,
 } from "react";
-import FocusTrap from "focus-trap-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Modal({children, showModal, setShowModal}) {
@@ -31,11 +28,10 @@ export default function Modal({children, showModal, setShowModal}) {
     <AnimatePresence>
       {showModal && (
         <>
-              {/* <FocusTrap focusTrapOptions={{ initialFocus: false }}> */}
                 <motion.div
                   ref={desktopModalRef}
                   key="desktop-modal"
-                  className="fixed inset-0 z-40 hidden min-h-screen items-center justify-center md:flex"
+                  className="fixed md:top-0 md:left-0 inset-0 z-40 h-screen items-center justify-center flex"
                   initial={{ scale: 0.95 }}
                   animate={{ scale: 1 }}
                   exit={{ scale: 0.95 }}

@@ -5,8 +5,8 @@ export const fetchTopPageMovies = async (category) => {
     const url = `https://api.themoviedb.org/3/movie/${category}`;
     const fetchMethod = {
         next: {
-            tags: [
-                'collection'
+            path: [
+                'productions'
             ]
         }
     }
