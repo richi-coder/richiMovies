@@ -35,7 +35,11 @@ function MobileMenu({ showMobileMenu, font, navigateMobileMenu }) {
                     className="w-full">
                     Series
                 </button>
-                <button className="w-full">Account</button>
+                <Link
+                    href={'/admin'}
+                    className="w-full text-center">
+                    Admin
+                    </Link>
             </div>
         </div>
     </div>
