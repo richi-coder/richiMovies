@@ -54,7 +54,7 @@ function BlockContainer({ revalidateList }) {
           <div className="flex flex-col items-center justify-center space-y-3 px-4 py-6 pt-8 text-center md:px-16">
             <div className="font-display text-2xl font-bold">About to revalidate . . . </div>
             <p className="text-md text-white">
-              After clicking <strong>REVALIDATE NOW</strong> you'll be redirected to the page you want updated
+              After clicking <strong>REVALIDATE NOW</strong> you&apos;ll be redirected to the page you want updated
               <br />
               <br />
               You wanna revalidate /{pathToRevalidate} page ?
