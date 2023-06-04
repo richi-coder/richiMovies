@@ -54,9 +54,11 @@ function DesktopHeader({ font }) {
                 <FaSearch />
             </Link>
         </div>
-        <div className='w-1/4 h-full flex flex-row items-center justify-end pr-10'>
-            Account
-        </div>
+        <Link
+            href={'/admin'}
+            className='w-1/4 h-full flex flex-row items-center justify-end pr-10'>
+            Admin
+        </Link>
     </div>
   )
 }
