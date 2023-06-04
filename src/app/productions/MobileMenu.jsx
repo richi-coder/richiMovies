@@ -35,11 +35,11 @@ function MobileMenu({ showMobileMenu, font, navigateMobileMenu }) {
                     className="w-full">
                     Series
                 </button>
-                <Link
-                    href={'/admin'}
-                    className="w-full text-center">
+                <button
+                    onClick={() => navigateMobileMenu('/admin')}
+                    className="w-full">
                     Admin
-                    </Link>
+                    </button>
             </div>
         </div>
     </div>
