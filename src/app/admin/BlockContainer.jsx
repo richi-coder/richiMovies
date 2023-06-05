@@ -41,13 +41,14 @@ function BlockContainer({ revalidateList }) {
         pathToRevalidate='productions'
         setShowModal={setShowModal}
         revalidateThisPath={revalidateThisPath}
-        description='Use this for updating the movies carousel shown at the top of /productions page. By doing so, the carousel updates to show 5 different movies based of movies categories shown down in the page'
+        description='Use this for updating the movies carousel shown at the top of /productions page. By doing so, the carousel updates to show 5 different movies based of movies categories shown down in the page.'
       />
       <Block 
         title={"Posters at homepage"}
         pathToRevalidate='home'
         setShowModal={setShowModal}
         revalidateThisPath={revalidateThisPath}
+        description='Use this for updating the posters shown at homepage. As the posters shown there depend on the API, trying to revalidate could be unproductive since the available resources are not changing very often.'
       />
       <Modal showModal={showModal} setShowModal={setShowModal}>
         <div className="w-full overflow-hidden md:max-w-md md:rounded-2xl md:shadow-xl bg-pink-600 border-black hover:border-[rgb(236,72,153)]">
