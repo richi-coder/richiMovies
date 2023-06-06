@@ -37,7 +37,7 @@ function BackgroudMovie() {
                       src={`https://image.tmdb.org/t/p/original${topMovie.url}`}
                       width={1500}
                       height={950}
-                      className={`-z-10 transition-all duration-1000 w-[150vw] backgroundImage`}
+                      className={`-z-10 transition-all duration-1000 w-[150vw] opacity-0 backgroundImage`}
                       alt={topMovie.url}
                       placeholder='empty'
                       key={movieIndex}
