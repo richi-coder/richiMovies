@@ -20,7 +20,7 @@ export function TopContext({ children, topMoviesList }) {
         }, [index])
     
   return (
-    <TopMoviesContext.Provider value={topMoviesList[index]}>
+    <TopMoviesContext.Provider value={{ topMoviesList, index }}>
         {children}
     </TopMoviesContext.Provider>
   )

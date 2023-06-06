@@ -1,12 +1,13 @@
 'use client'
 import { useContext } from "react";
 import { TopMoviesContext } from "./TopContext";
-import BackgroudMovie from "./BackgroundMovie";
 
-function ClientBackground() {
-    const { url } = useContext(TopMoviesContext);
+function ClientBackground({ children }) {
+    const { topMoviesList, index } = useContext(TopMoviesContext);
   return (
-    <BackgroudMovie url={url} />
+    <>
+        {children}
+    </>
   )
 }
 

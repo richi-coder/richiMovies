@@ -4,7 +4,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { TopMoviesContext } from "./TopContext";
 
 function TopMovies() {
-  const { title, overview, id } = useContext(TopMoviesContext);
+  const { topMoviesList, index } = useContext(TopMoviesContext);
+  const { title, id, overview} = topMoviesList[index];
   // const [animationClassname, setAnimationClassname] = useState('')
 
   useEffect(() => {
