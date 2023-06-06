@@ -126,6 +126,29 @@ main {
     }
   }
 
+  .loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .loader:before , .loader:after{
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 10px 2px white inset;
+  }
+  .loader:after {
+    box-shadow: 0 5px 0 rgb(236,72,153) inset;
+    animation: rotate 0.5s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {  transform: rotate(0)}
+    100% { transform: rotate(360deg)}
+  }
+
 
   /* width */
 ::-webkit-scrollbar {

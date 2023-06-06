@@ -32,7 +32,7 @@ function YoutubeClient({ videoKeys, params, videoEnded, index }) {
     
     
   return (
-    <div className='w-full flex flex-col items-center'>
+    <div className='w-full h-fit flex flex-col items-center'>
       {
         videoKeys[0] ?
         <>
@@ -56,7 +56,9 @@ function YoutubeClient({ videoKeys, params, videoEnded, index }) {
           // onPlaybackRateChange={func}       // defaults -> noop
           // onPlaybackQualityChange={func}    // defaults -> noop
         /> :
-        null
+        <div className='w-full flex flex-col items-center justify-center h-[50vh] sm:h-[80vh] md:h-[37vh] lg:h-[85vh] overflow-clip pt-16'>
+          <span className="loader"></span>
+        </div>
         }
         </> :
         <div className='h-screen w-screen relative text-5xl'>
