@@ -20,10 +20,9 @@ export default async function MoviesPage() {
 
   return (
     <TopContext topMoviesList={topMoviesList}>
-      
-      <ClientBackground>
+      {/* <ClientBackground> */}
         <BackgroudMovie />
-      </ClientBackground>
+      {/* </ClientBackground> */}
       <CategoriesContainer />
       <Footer />
     </TopContext>

@@ -30,6 +30,16 @@ main {
   padding: 0;
 }
 
+.backgroundImage {
+  animation: backgroundImage 10s ease-in-out 1 ;
+}
+@keyframes backgroundImage {
+  0% { opacity: 0 }
+  5% { opacity: 1 }
+  95% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
 
   .lds-roller {
     display: inline-block;

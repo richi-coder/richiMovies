@@ -3,13 +3,10 @@ import { useContext } from 'react'
 // import { getPlaiceholder } from 'plaiceholder';
 import { TopMoviesContext } from './TopContext';
 import Image from 'next/image';
-import { Suspense } from 'react';
-// import { getPlaiceholder } from 'plaiceholder';
 
 
 function BackgroudMovie() {
   const { topMoviesList, index } = useContext(TopMoviesContext);
-
   // async function blurPlaceholder(url) {
   //   const src = `https://image.tmdb.org/t/p/original${url}`;
   //   const options = {
@@ -27,8 +24,6 @@ function BackgroudMovie() {
   //     }
   // })
 
-  
-
   return (
     <div
         className='fixed top-0 left-1/2 -translate-x-1/3 sm:left-0 sm:translate-x-0 h-auto w-[200vw] sm:h-auto sm:w-screen -z-10 duration-500'
@@ -42,7 +37,7 @@ function BackgroudMovie() {
                       src={`https://image.tmdb.org/t/p/original${topMovie.url}`}
                       width={1500}
                       height={950}
-                      className='-z-10 transition-all duration-500 w-[150vw]'
+                      className={`-z-10 transition-all duration-1000 w-[150vw] backgroundImage`}
                       alt={topMovie.url}
                       placeholder='empty'
                       key={movieIndex}
