@@ -27,7 +27,7 @@ function Suggestions() {
     
   return (
     <div ref={suggestionsRef} className='w-full bg-black py-12 sm:py-24'>
-      <Suspense fallback={<></>}>
+      {/* <Suspense fallback={<></>}> */}
           <>
           {
               suggestedMovies ?
@@ -38,7 +38,7 @@ function Suggestions() {
               null
           }
           </>
-      </Suspense>
+      {/* </Suspense> */}
     </div>
     
   )
