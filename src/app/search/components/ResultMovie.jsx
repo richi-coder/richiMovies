@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FallbackMovie from "./FallbackMovie";
 
-function ResultMovie({ searchedMovie: movie }) {
+function ResultProduction({ searchedProduction: movie }) {
   const imageURL = movie.poster_path || movie.backdrop_path;
   
   return (
@@ -25,4 +25,4 @@ function ResultMovie({ searchedMovie: movie }) {
   );
 }
 
-export default ResultMovie;
+export default ResultProduction;
