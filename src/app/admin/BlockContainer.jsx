@@ -4,7 +4,7 @@ import { useState } from "react";
 import Block from "./Block";
 import Modal from "./Modal";
 import Image from "next/image";
-import { revalidatePage } from "../services/Revalidation";
+import { revalidatePage } from "../../services/Revalidation";
 
 function BlockContainer({ revalidateList }) {
   const [showModal, setShowModal] = useState(false);

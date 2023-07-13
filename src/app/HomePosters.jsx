@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { fetchHomePosters } from "./services/OnDemandService"
+import { fetchHomePosters } from "../services/OnDemandService"
 
 async function HomePosters() {
     // fetching posters

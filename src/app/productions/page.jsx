@@ -1,4 +1,4 @@
-import { fetchTopPageMovies } from "../services/OnDemandService";
+import { fetchTopPageMovies } from "../../services/OnDemandService";
 import BackgroudMovie from "./BackgroundMovie";
 import CategoriesContainer from "./CategoriesContainer";
 import ClientBackground from "./ClientBackground";

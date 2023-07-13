@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from "react";
-import { fetchFromClient } from "../services/ClientService";
+import { fetchFromClient } from "../../services/ClientService";
 import SearchResults from "./SearchResults";
 import Link from "next/link";
 import { ImCross } from "react-icons/im"

@@ -1,4 +1,4 @@
-import { fetchCategoriesMovies, fetchCategoriesSeries, fetchData } from "../services/BackgroundService";
+import { fetchCategoriesMovies, fetchCategoriesSeries, fetchData } from "../../services/BackgroundService";
 import ClientCategory from "./ClientCategory";
 
 async function CategorySeries({category}) {

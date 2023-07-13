@@ -1,5 +1,5 @@
 'use client'
-import { fetchSuggestions } from '@/app/services/ClientService'
+import { fetchSuggestions } from '@/services/ClientService'
 import { Suspense, useEffect, useRef, useState } from 'react'
 import ClientCategory from '../../ClientCategory'
 

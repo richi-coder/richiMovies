@@ -1,5 +1,5 @@
 import SearchResults from "@/app/search/SearchResults";
-import { fetchProductionTypePage } from "@/app/services/BackgroundService";
+import { fetchProductionTypePage } from "@/services/BackgroundService";
 
 async function ProductionTypePage({ params }) {
     const res = await fetchProductionTypePage(params.productionType);

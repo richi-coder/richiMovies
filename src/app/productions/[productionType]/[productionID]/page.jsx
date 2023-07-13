@@ -1,4 +1,4 @@
-import { fetchSpecificMovie } from "@/app/services/BackgroundService";
+import { fetchSpecificMovie } from "@/services/BackgroundService";
 import Description from "./Description";
 import Background from "./Background";
 import Suggestions from "./Suggestions";

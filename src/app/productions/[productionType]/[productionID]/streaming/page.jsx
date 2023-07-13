@@ -1,4 +1,4 @@
-import { fetchSpecificProductionTrailers } from "@/app/services/BackgroundService";
+import { fetchSpecificProductionTrailers } from "@/services/BackgroundService";
 import StreamingWrapper from "./StreamingWrapper";
 
 async function StreamingPage({ params }) {
