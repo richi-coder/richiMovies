@@ -1,5 +1,3 @@
-import React from 'react'
-
 function FallbackMovie({ movie }) {
   return (
     <div className='w-full h-[265px] bg-gray-500 text-white relative'>
