@@ -1,5 +1,5 @@
-import { ListResults } from './ListResults';
-import ClientLoader from "@/app/ClientLoader";
+import { ListResults } from '../app/search/components/ListResults';
+import ClientLoader from './ClientLoader';
 
 export default function SearchResults({ search }) {
   const { state, searchedProductions } = search;

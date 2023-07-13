@@ -1,7 +1,6 @@
 'use client';
 import React from "react";
-import SearchResults from "./components/SearchResults";
-import ClientLoader from "../ClientLoader";
+import SearchResults from "../../commonComponents/SearchResults";
 import SearchBar from './components/SearchBar';
 import useSearching from "./hooks/useSearching";
 
