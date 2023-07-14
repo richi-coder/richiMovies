@@ -1,4 +1,4 @@
-import SearchResults from "@/components/SearchResults";
+import { ListResults } from "@/components/ListResults";
 import { fetchProductionTypePage } from "@/services/BackgroundService";
 
 async function ProductionTypePage({ params }) {
@@ -17,7 +17,7 @@ async function ProductionTypePage({ params }) {
       </h3>
       <hr className='mx-24 border-[rgb(236,72,153)]' />
       <>
-      <SearchResults search={{state: true, searchedProductions: productions}} />
+      <ListResults searchedProductions={productions} />
       </>
     </div>
   )

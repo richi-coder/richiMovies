@@ -1,3 +1,4 @@
+'use client'
 import { loadingState } from '@/app/search/utils/loadingState';
 import { ListResults } from './ListResults';
 import ClientLoader from './ClientLoader';

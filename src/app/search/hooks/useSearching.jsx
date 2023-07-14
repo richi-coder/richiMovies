@@ -1,15 +1,27 @@
+'use client'
+
 import { fetchFromClient } from "@/services/ClientService";
-import { useState } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
 import { loadingState } from "../utils/loadingState";
+import { readSearchFromSessionStorage, storeSearchToSessionStorage } from "../utils/sessionsStorage";
+
+const initState = {
+  input: '',
+  state: loadingState.IDLING,
+  searchedProductions: []
+};
 
 export default function useSearching() {
-    const [query, setQuery] = useState({
-        input: '',
-        state: loadingState.IDLING,
-        searchedProductions: []
-      });
+    const [query, setQuery] = useState(initState);
+
+    useLayoutEffect(() => {
+      console.log('effect');
+      const savedQuery = readSearchFromSessionStorage()
+      setQuery(savedQuery)
+    }, [])
     
-      const searchMovies = (e) => {
+
+    const searchMovies = (e) => {
           e.preventDefault();
           setQuery({
             ...query,
@@ -23,6 +35,11 @@ export default function useSearching() {
                     state: loadingState.FOUND,
                     searchedProductions: data.results
                   })
+                  const searchToStore = {
+                    searchMade: query.input,
+                    productionsResults: data.results
+                  }
+                  storeSearchToSessionStorage(searchToStore)
                 } else {
                   setQuery({
                     ...query,
@@ -30,21 +47,20 @@ export default function useSearching() {
                   })
                 }
               })
-              .catch(err => console.log(err, 'error')) 
+              .catch(err => console.log(err, 'Error fetching productions!')) 
         }
     
-      const handleChange = ({ target }) => {
+    const handleChange = ({ target }) => {
         setQuery({
           ...query,
           input: target.value,
         })
-      }
+    }
       
-      const search = query;
-      const setSearch = {
+    const setSearch = {
         handleChange,
         searchMovies
-      }
+    }
   
-    return [search, setSearch]
+    return [query, setSearch];
 }

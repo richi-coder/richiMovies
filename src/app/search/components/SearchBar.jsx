@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ImCross } from "react-icons/im";
 
 export default function SearchBar({ search, searchMovies, handleChange }) {
+  console.log('searchBAR', search);
   
   return (
     <form onSubmit={searchMovies} className="w-[90vw] relative">

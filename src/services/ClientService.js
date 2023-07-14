@@ -2,8 +2,7 @@
 // Hitting an own api endpoint (/api/search) which will return data from the external api to my api
 export const fetchFromClient = async (query) => {
     const data = await fetch(`/api/search?query=${query}`);
-    const res = await data.json();
-    return res;
+    return data.json();
 }
 
 // Suggestions from client

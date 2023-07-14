@@ -1,4 +1,5 @@
 'use client';
+
 import React from "react";
 import SearchResults from "../../components/SearchResults";
 import SearchBar from './components/SearchBar';
