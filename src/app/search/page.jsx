@@ -6,11 +6,11 @@ import SearchBar from './components/SearchBar';
 import useSearching from "./hooks/useSearching";
 
 function SearchPage() {
-  const [search, { handleChange, searchMovies }] = useSearching()
+  const [search, setSearch] = useSearching()
 
   return (
     <div className="text-white flex flex-col items-center animate-fade-up">
-      <SearchBar search={search} searchMovies={searchMovies} handleChange={handleChange}  />
+      <SearchBar search={search} setSearch={setSearch}  />
       <SearchResults search={search} />
     </div>
   );

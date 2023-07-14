@@ -7,7 +7,7 @@ import { readSearchFromSessionStorage, storeSearchToSessionStorage } from "../ut
 
 const initState = {
   input: '',
-  state: loadingState.IDLING,
+  state: loadingState.LOADING,
   searchedProductions: []
 };
 
@@ -51,15 +51,32 @@ export default function useSearching() {
         }
     
     const handleChange = ({ target }) => {
+        if (target.value === '') {
+          setQuery({
+            state: loadingState.IDLING,
+            input: target.value,
+            searchedProductions: []
+          })
+          return
+        }
         setQuery({
           ...query,
           input: target.value,
         })
     }
+    
+    const emptySearchBar = () => {
+      setQuery({
+        state: loadingState.IDLING,
+        input: '',
+        searchedProductions: []
+      })
+    }
       
     const setSearch = {
         handleChange,
-        searchMovies
+        searchMovies,
+        emptySearchBar
     }
   
     return [query, setSearch];
