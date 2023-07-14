@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import FallbackMovie from "./FallbackMovie";
+import FallbackMovie from "../app/search/components/FallbackMovie";
 
 function ResultProduction({ searchedProduction: movie }) {
   const imageURL = movie.poster_path || movie.backdrop_path;

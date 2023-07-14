@@ -1,4 +1,4 @@
-import SearchResults from "@/commonComponents/SearchResults";
+import SearchResults from "@/components/SearchResults";
 import { fetchProductionTypePage } from "@/services/BackgroundService";
 
 async function ProductionTypePage({ params }) {

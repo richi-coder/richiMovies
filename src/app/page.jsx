@@ -1,6 +1,6 @@
 import { Limelight } from 'next/font/google'
 import Link from 'next/link'
-import HomePosters from '../commonComponents/HomePosters'
+import HomePosters from '../components/HomePosters'
 
 export const limelight = Limelight({subsets: ['latin'], weight: '400'})
 

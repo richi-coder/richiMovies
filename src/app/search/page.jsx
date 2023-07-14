@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import SearchResults from "../../commonComponents/SearchResults";
+import SearchResults from "../../components/SearchResults";
 import SearchBar from './components/SearchBar';
 import useSearching from "./hooks/useSearching";
 
