@@ -1,9 +1,10 @@
 'use client'
 
 import { fetchFromClient } from "@/services/ClientService";
-import { useEffect, useLayoutEffect, useState } from "react"
+import { useLayoutEffect, useState } from "react"
 import { loadingState } from "../utils/loadingState";
-import { readSearchFromSessionStorage, storeSearchToSessionStorage } from "../utils/sessionsStorage";
+import { readSearchFromSessionStorage, storeSearchToSessionStorage } from "../../../utils/sessionsStorage";
+import { validateSearch } from "../utils/searchValidations";
 
 const initState = {
   input: '',
@@ -15,18 +16,22 @@ export default function useSearching() {
     const [query, setQuery] = useState(initState);
 
     useLayoutEffect(() => {
-      console.log('effect');
       const savedQuery = readSearchFromSessionStorage()
       setQuery(savedQuery)
     }, [])
     
 
     const searchMovies = (e) => {
+
           e.preventDefault();
+
+          if (!validateSearch(query.input)) return
+
           setQuery({
             ...query,
             state: loadingState.LOADING
           })
+
           fetchFromClient(query.input)
               .then(({ data }) => {
                 if (data.results.length > 0) {
@@ -48,6 +53,7 @@ export default function useSearching() {
                 }
               })
               .catch(err => console.log(err, 'Error fetching productions!')) 
+
         }
     
     const handleChange = ({ target }) => {

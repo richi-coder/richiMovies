@@ -1,8 +1,9 @@
 'use client'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 // import { getPlaiceholder } from 'plaiceholder';
 import { TopMoviesContext } from './TopContext';
 import Image from 'next/image';
+import { removeStoredSearch } from '@/utils/sessionsStorage';
 
 
 function BackgroudMovie() {
@@ -23,6 +24,10 @@ function BackgroudMovie() {
   //       ...blurData
   //     }
   // })
+
+  useEffect(() => {
+    removeStoredSearch('searchStored')
+  }, [])
 
   return (
     <div

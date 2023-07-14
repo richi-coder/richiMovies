@@ -1,4 +1,4 @@
-import { loadingState } from "./loadingState";
+import { loadingState } from "../app/search/utils/loadingState";
 
 // Storing a search in storage to decrease load times when coming back
 export const readSearchFromSessionStorage = () => {
@@ -24,8 +24,6 @@ export const readSearchFromSessionStorage = () => {
 
 }
 
-export const storeSearchToSessionStorage = (searchToStore) => {
+export const storeSearchToSessionStorage = (searchToStore) => window.sessionStorage.setItem('searchStored', JSON.stringify(searchToStore))
 
-    window.sessionStorage.setItem('searchStored', JSON.stringify(searchToStore));
-
-}
+export const removeStoredSearch = (storedSearchItem) => window.sessionStorage.removeItem(storedSearchItem)
