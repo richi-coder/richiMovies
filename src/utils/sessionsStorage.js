@@ -15,7 +15,6 @@ export const readSearchFromSessionStorage = () => {
             initState.input = parsedData.searchMade; 
             initState.state = loadingState.FOUND;
         }
-        console.log('try', initState);
         return initState
     } catch (error) {
         console.log('error', error);
