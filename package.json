@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "e2e": "cypress open"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.3",
+    "focus-trap-react": "^10.0.2",
+    "framer-motion": "^8.4.2",
     "next": "13.4.3",
     "plaiceholder": "^2.5.0",
     "postcss": "8.4.23",
@@ -20,8 +23,9 @@
     "react-icons": "^4.8.0",
     "react-youtube": "^10.1.0",
     "sharp": "^0.32.1",
-    "tailwindcss": "3.3.2",
-    "focus-trap-react": "^10.0.2",
-    "framer-motion": "^8.4.2"
+    "tailwindcss": "3.3.2"
+  },
+  "devDependencies": {
+    "cypress": "^12.17.1"
   }
 }
