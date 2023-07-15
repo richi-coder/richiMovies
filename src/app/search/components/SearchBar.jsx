@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { ImCross } from "react-icons/im";
+import { CrossIcon, Link } from "@/external/externalComponents"; 
 
-export default function SearchBar({ search, setSearch }) {
+export default function SearchBar({ search = '', setSearch }) {
   const { handleChange, searchMovies, emptySearchBar } = setSearch;
   
   return (
@@ -18,7 +17,7 @@ export default function SearchBar({ search, setSearch }) {
         href={"/productions"}
         className="absolute top-1/2 -translate-y-1/2 right-0"
       >
-        <ImCross />
+        <CrossIcon />
       </Link>
     </form>
   );

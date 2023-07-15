@@ -1,8 +1,7 @@
-'use client'
 import { loadingState } from '@/app/search/utils/loadingState';
-import { ListResults } from './ListResults';
-import ClientLoader from './ClientLoader';
+import ClientLoader from '@/components/ClientLoader';
 import NotFound from '@/app/search/components/NotFound';
+import ListResults from '@/components/ListResults';
 
 export default function SearchResults({ search }) {
   const { state, searchedProductions } = search;

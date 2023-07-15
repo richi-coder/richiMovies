@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import FallbackMovie from "../app/search/components/FallbackMovie";
+import FallbackMovie from "@/app/search/components/FallbackMovie";
 
-function ResultProduction({ searchedProduction: movie }) {
+export default function ResultProduction({ searchedProduction: movie }) {
   const imageURL = movie.poster_path || movie.backdrop_path;
   
   return (
@@ -24,5 +24,3 @@ function ResultProduction({ searchedProduction: movie }) {
     </li>
   );
 }
-
-export default ResultProduction;

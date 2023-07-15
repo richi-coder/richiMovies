@@ -1,9 +1,8 @@
 'use client';
 
-import React from "react";
-import SearchResults from "../../components/SearchResults";
-import SearchBar from './components/SearchBar';
-import useSearching from "./hooks/useSearching";
+import SearchResults from "@/components/SearchResults";
+import SearchBar from '@/app/search/components/SearchBar';
+import useSearching from "@/app/search/hooks/useSearching";
 
 export default function SearchPage() {
   const [search, setSearch] = useSearching()

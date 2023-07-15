@@ -7,7 +7,7 @@ describe('template spec', () => {
   })
 
   it('making a search not in database', () => {
-    cy.get('input').type('wefwnfwfewin')
+    cy.get('input').type('wtfwtfwtfwtf')
     cy.get('form').submit()
     cy.contains('Not Found')
   })
@@ -18,7 +18,7 @@ describe('template spec', () => {
     cy.get('ul').should('not.exist')
   })
 
-  it.only('succesful search and click on production', () => {
+  it('succesful search and click on production', () => {
     cy.get('input').type(productionToSearch)
     cy.get('form').submit()
     cy.get('.lds-roller')

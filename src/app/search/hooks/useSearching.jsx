@@ -2,9 +2,9 @@
 
 import { fetchFromClient } from "@/services/ClientService";
 import { useLayoutEffect, useRef, useState } from "react"
-import { loadingState } from "../utils/loadingState";
-import { readSearchFromSessionStorage, storeSearchToSessionStorage } from "../../../utils/sessionsStorage";
-import { validateSearch } from "../utils/searchValidations";
+import { loadingState } from "@/app/search/utils/loadingState";
+import { readSearchFromSessionStorage, storeSearchToSessionStorage } from "@/utils/sessionsStorage";
+import { validateSearch } from "@/app/search/utils/searchValidations";
 
 const initState = {
   input: '',
