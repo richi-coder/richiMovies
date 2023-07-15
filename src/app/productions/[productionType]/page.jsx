@@ -1,4 +1,4 @@
-import { ListResults } from "@/components/ListResults";
+import ListResults from "@/components/ListResults";
 import { fetchProductionTypePage } from "@/services/BackgroundService";
 
 async function ProductionTypePage({ params }) {
