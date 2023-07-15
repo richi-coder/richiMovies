@@ -1,4 +1,4 @@
-function NotFound() {
+export default function NotFound() {
   return (
     <div className="flex flex-col items-center mt-32">
         <div className="font-bold text-center text-4xl">Not Found</div>
@@ -6,5 +6,3 @@ function NotFound() {
     </div>
   )
 }
-
-export default NotFound

@@ -5,7 +5,7 @@ import SearchResults from "../../components/SearchResults";
 import SearchBar from './components/SearchBar';
 import useSearching from "./hooks/useSearching";
 
-function SearchPage() {
+export default function SearchPage() {
   const [search, setSearch] = useSearching()
 
   return (
@@ -15,5 +15,3 @@ function SearchPage() {
     </div>
   );
 }
-
-export default SearchPage;
