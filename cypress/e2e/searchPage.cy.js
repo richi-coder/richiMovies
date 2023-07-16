@@ -28,5 +28,15 @@ describe('template spec', () => {
     cy.get('@firstImg').click()
     cy.url().should('include', '/productions/movie/')
   })
+
+  it('deleting whole searchBar content', () => {
+    cy.get('input').as('searchBar')
+    cy.get('@searchBar').type('content to delete')
+    cy.get('form').submit()
+    cy.contains('Not Found')
+    cy.get('[data-cy="deleteButton"]').click()
+    cy.get('@searchBar').invoke('val').should('eq','')
+    
+  })
   
 })
