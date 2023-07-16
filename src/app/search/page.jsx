@@ -1,6 +1,6 @@
 'use client';
 
-import SearchResults from "@/components/SearchResults";
+import SearchResults from "@/app/search/components/SearchResults";
 import SearchBar from '@/app/search/components/SearchBar';
 import useSearching from "@/app/search/hooks/useSearching";
 
